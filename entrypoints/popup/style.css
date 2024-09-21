@@ -1,0 +1,15 @@
+body {
+  @apply m-0 flex items-start min-w-[800px] min-h-[600px] justify-center overflow-hidden;
+}
+
+html, body {
+  @apply rounded-md;
+}
+
+body > div {
+  @apply min-w-[800px] min-h-[600px] overflow-hidden;
+}
+
+* {
+  @apply overflow-x-hidden overflow-y-auto;
+}
