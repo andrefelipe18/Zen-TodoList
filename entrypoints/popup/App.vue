@@ -4,7 +4,6 @@ import TodoItem from '@/components/TodoItem.vue';
 import TodoInput from '@/components/TodoInput.vue';
 import AppTitle from '@/components/AppTitle.vue';
 import useTodos from '@/composables/useTodos';
-import formatDate from '@/utils/formatDate';
 import { ref } from 'vue';
 
 const newTodo = ref('');
