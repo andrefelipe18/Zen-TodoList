@@ -1,7 +1,30 @@
-# WXT + Vue 3
+# TodoList Zen-Browser
 
-This template should help get you started developing with Vue 3 in WXT.
+## Description
+This is a simple todo list application that allows users to add,and delete tasks. The application is built using Vue and WXT. The application is styled using Tailwind CSS.
 
-## Recommended IDE Setup
+## How to run the extension
+1. Clone the repository
+```bash
+git clone https://github.com/andrefelipe18/Zen-TodoList.git todo-zen
+```
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+2. Navigate to the project directory
+```bash
+cd todo-zen
+```
+
+3. Install the dependencies
+```bash
+bun install
+```
+
+4. Run the application in development mode
+```bash
+bun run dev
+```
+
+5. Build the application
+```bash
+bun run build && bun zip:firefox
+```
