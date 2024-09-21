@@ -1,5 +1,6 @@
 body {
   @apply m-0 flex items-start min-w-[800px] min-h-[600px] justify-center overflow-hidden;
+  background-color: #0d0c0c;
 }
 
 html, body {
@@ -8,6 +9,7 @@ html, body {
 
 body > div {
   @apply min-w-[800px] min-h-[600px] overflow-hidden;
+  background-color: #0d0c0c;
 }
 
 * {

@@ -60,30 +60,40 @@ const formatDate = (dateString: string) => {
 
 <template>
   <div class="w-full">
-    <div class="my-2 flex w-full justify-center">
-      <h1 class="text-2xl text-center font-bold">Min ToDo</h1>
+    <div class="flex justify-center w-full my-2">
+      <h1 class="text-2xl text-center font-bold text-[#f3f4f6]">Min ToDo</h1>
     </div>
 
     <div class="w-full px-12">
-      <input class="input input-secondary w-full" type="text" v-model="newTodo" @keyup.shift.enter="addTodo"
-        placeholder="What needs to be done?" />
+      <input
+        class="input input-bordered w-full text-[#f3f4f6] border border-[#f3f4f6] bg-[#171717] focus:border-[#ffffff] transition duration-150"
+        type="text" v-model="newTodo" @keyup.shift.enter="addTodo" placeholder="What needs to be done?" />
     </div>
 
     <div class="w-full px-12">
       <div v-for="(todos, date) in groupedTodos" :key="date" class="mt-4">
-        <h2 class="text-xl font-bold">{{ formatDate(date) }}</h2>
+        <h2 class="text-xl font-bold text-[#f3f4f6]">{{ formatDate(date) }}</h2>
         <ul class="w-full">
-          <li v-for="todo in todos" :key="todo.id" class="flex items-center justify-between p-2 gap-2 border-b border-secondary">
+          <li v-for="todo in todos" :key="todo.id"
+            class="flex items-center justify-between gap-2 p-2 border-b border-[#f3f4f6] ">
             <div class="flex items-center">
-              <input type="checkbox" class="checkbox checkbox-secondary" @change="completeTodo(todo.id)" />
-              <span class="ml-2 font-normal text-sm" :class="{ 'line-through': todo.done }">{{ todo.text }}</span>
+              <input type="checkbox" 
+              class="checkbox h-5 w-5 text-[#f3f4f6] border-[#f3f4f6] focus:border-[#ffffff] transition duration-150"
+              @change="completeTodo(todo.id)" />
+              <span class="ml-2 text-sm font-normal" :class="{ 'line-through': todo.done }">{{ todo.text }}</span>
             </div>
-            <button class="btn btn-accent" @click="removeTodo(todo.id)">Remove</button>
+            <button
+              class="btn bg-[#171717] text-[#f3f4f6] hover:bg-[#0d0c0c] hover:border-[#f3f4f6] transition duration-500"
+              @click="removeTodo(todo.id)">Remove</button>
           </li>
         </ul>
       </div>
     </div>
   </div>
 </template>
-
-<style scoped></style>
+<style scoped>
+.checkbox:checked {
+  background-color: #f3f4f6 !important;
+  color: #171717 !important;
+}
+</style>
