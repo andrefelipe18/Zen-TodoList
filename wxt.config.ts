@@ -5,9 +5,11 @@ export default defineConfig({
   modules: ['@wxt-dev/module-vue'],
 
   manifest: {
-    name: 'Min ToDo List',
+    name: 'Min ToDoList',
     version: '0.0.1',
-    description: 'Minimal ToDo List',
+    description: 'Minimal ToDo List Extension inspired by Zen Browser',
     permissions: ['storage'],
   },
+
+  manifestVersion: 2,
 });
