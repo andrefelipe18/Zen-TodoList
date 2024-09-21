@@ -16,7 +16,7 @@ const { todos, addTodo, removeTodo, completeTodo, todosGroupedByDate } = useTodo
   <div class="w-full">
     <AppTitle title="Min ToDo" />
     <TodoInput v-model="newTodo" @add="addTodo" />
-    <TodoList :todos="todos" >
+    <TodoList v-for="(todos, date) in todosGroupedByDate" :key="date" :date >
       <TodoItem v-for="todo in todos" :key="todo.id" :todo  @complete="completeTodo" @remove="removeTodo"  />
     </TodoList>
   </div>
