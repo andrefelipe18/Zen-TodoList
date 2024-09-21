@@ -64,10 +64,13 @@ const formatDate = (dateString: string) => {
       <h1 class="text-2xl text-center font-bold text-[#f3f4f6]">Min ToDo</h1>
     </div>
 
-    <div class="w-full px-12">
+    <div class="flex w-full gap-4 px-12">
       <input
-        class="input input-bordered w-full text-[#f3f4f6] border border-[#f3f4f6] bg-[#171717] focus:border-[#ffffff] transition duration-150"
+        class="input input-bordered w-full text-[#f3f4f6] border border-[#f3f4f6] bg-[#171717] focus:border-[#ffffff] transition duration-150 !rounded-lg"
         type="text" v-model="newTodo" @keyup.shift.enter="addTodo" placeholder="What needs to be done?" />
+      <button
+        class="btn bg-[#171717] text-[#f3f4f6] hover:bg-[#0d0c0c] hover:border-[#f3f4f6] transition duration-500 !rounded-lg"
+        @click="addTodo">Add</button>
     </div>
 
     <div class="w-full px-12">
@@ -78,12 +81,12 @@ const formatDate = (dateString: string) => {
             class="flex items-center justify-between gap-2 p-2 border-b border-[#f3f4f6] ">
             <div class="flex items-center">
               <input type="checkbox" 
-              class="checkbox h-5 w-5 text-[#f3f4f6] border-[#f3f4f6] focus:border-[#ffffff] transition duration-150"
+              class="checkbox h-5 w-5 text-[#f3f4f6] border-[#f3f4f6] transition duration-150 !rounded-lg"
               @change="completeTodo(todo.id)" />
-              <span class="ml-2 text-sm font-normal" :class="{ 'line-through': todo.done }">{{ todo.text }}</span>
+              <span class="ml-2 text-sm font-normal text-[#f3f4f6]" :class="{ 'line-through': todo.done }">{{ todo.text }}</span>
             </div>
             <button
-              class="btn bg-[#171717] text-[#f3f4f6] hover:bg-[#0d0c0c] hover:border-[#f3f4f6] transition duration-500"
+              class="btn bg-[#171717] text-[#f3f4f6] hover:bg-[#0d0c0c] hover:border-[#f3f4f6] transition duration-500 !rounded-lg"
               @click="removeTodo(todo.id)">Remove</button>
           </li>
         </ul>
