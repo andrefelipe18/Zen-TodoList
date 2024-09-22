@@ -6,7 +6,7 @@ defineProps<{
 }>();
 </script>
 <template>
-  <div class="w-full px-12">
+  <div class="w-full px-12 overflow-auto">
       <div  class="mt-4">
         <h2 class="text-xl font-bold text-neutral-content">{{ formatDate(date) }}</h2>
         <ul class="w-full">

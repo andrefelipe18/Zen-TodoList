@@ -19,7 +19,7 @@ const removeTodo = (id: number) => {
 };
 </script>
 <template>
-  <li class="flex items-center justify-between gap-2 p-2 border-b border-neutral-content ">
+   <li class="flex items-center justify-between gap-2 p-2 border-b border-neutral-content ">
     <div class="flex items-center">
       <input type="checkbox"
         class="w-5 h-5 transition duration-150 checkbox text-neutral-content border-neutral-content"
@@ -28,7 +28,7 @@ const removeTodo = (id: number) => {
         todo.text }}</span>
     </div>
     <button
-      class="transition duration-500 btn btn-base-100 text-neutral-content hover:bg-neutral hover:border-neutral-content"
+      class="btn-default"
       @click="removeTodo(todo.id)">Remove</button>
   </li>
 </template>

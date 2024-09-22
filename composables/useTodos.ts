@@ -21,6 +21,10 @@ export default function useTodos() {
     if (index !== -1) todos.value.splice(index, 1);
   };
 
+  const removeAll = () => {
+    todos.value = [];
+  }
+
   const completeTodo = (id: number) => {
     const todo = todos.value.find((todo) => todo.id === id);
     if (todo) {
@@ -46,5 +50,6 @@ export default function useTodos() {
     removeTodo,
     completeTodo,
     todosGroupedByDate,
+    removeAll,
   }
 }
