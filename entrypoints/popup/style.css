@@ -25,3 +25,7 @@ body > div {
 .checkbox {
   @apply !rounded-lg
 }
+
+.btn-default {
+  @apply transition duration-500 btn text-neutral-content hover:bg-neutral hover:border-neutral-content;
+}

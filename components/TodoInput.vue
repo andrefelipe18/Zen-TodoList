@@ -16,7 +16,7 @@ const addTodo = (todo: string) => {
         class="w-full transition duration-150 border input input-bordered text-neutral-content border-neutral-content input-base-100 focus:border-neutral-content "
         type="text" v-model="model" @keyup.shift.enter="addTodo(model)" placeholder="What needs to be done?" />
       <button
-        class="transition duration-500 btn btn-base-100 text-neutral-content hover:bg-neutral hover:border-neutral-content"
+        class="btn-default"
         @click="addTodo(model)">Add</button>
     </div>
 </template>

@@ -6,9 +6,8 @@ export default defineConfig({
 
   manifest: {
     name: 'Min ToDoList',
-    version: '0.0.1',
+    version: '1.0.0',
     description: 'Minimal ToDo List Extension inspired by Zen Browser',
-    permissions: ['storage'],
   },
 
   manifestVersion: 2,

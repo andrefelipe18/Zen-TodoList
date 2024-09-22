@@ -30,7 +30,7 @@ const removeTodo = (id: number) => {
                 todo.text }}</span>
             </div>
             <button
-              class="transition duration-500 btn btn-base-100 text-neutral-content hover:bg-neutral hover:border-neutral-content"
+              class="btn-default"
               @click="removeTodo(todo.id)">Remove</button>
           </li>
   -->
@@ -43,7 +43,7 @@ const removeTodo = (id: number) => {
         todo.text }}</span>
     </div>
     <button
-      class="transition duration-500 btn btn-base-100 text-neutral-content hover:bg-neutral hover:border-neutral-content"
+      class="btn-default"
       @click="removeTodo(todo.id)">Remove</button>
   </li>
 </template>
