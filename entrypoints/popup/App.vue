@@ -1,7 +1,5 @@
 <script lang="ts" setup>
-import { RouterView } from 'vue-router';
 import AppTitle from '@/components/AppTitle.vue';
-import useTodos from '@/composables/useTodos';
 </script>
 
 <template>

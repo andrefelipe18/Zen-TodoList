@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import { useRouter, useRoute } from 'vue-router'
+
+const router = useRouter()
+
 import TodoList from '@/components/TodoList.vue';
 import TodoItem from '@/components/TodoItem.vue';
 import TodoInput from '@/components/TodoInput.vue';
@@ -15,7 +19,7 @@ const add = (todo: string) => {
 };
 
 const editTodo = (id: number) => {
-    newTodo.value = todos.value.find((todo) => todo.id === id)?.text || '';
+    router.push({ name: 'edit', params: { id } });
 };
 </script>
 <template>

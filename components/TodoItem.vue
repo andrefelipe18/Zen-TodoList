@@ -9,6 +9,7 @@ const props = defineProps<{
 const emits = defineEmits<{
   (event: 'complete', id: number): void;
   (event: 'remove', id: number): void;
+  (event: 'edit', id: number): void;
 }>();
 
 const completeTodo = (id: number) => {
@@ -17,6 +18,10 @@ const completeTodo = (id: number) => {
 
 const removeTodo = (id: number) => {
   emits('remove', id);
+};
+
+const edit = (id: number) => {
+  emits('edit', id);
 };
 </script>
 <template>
@@ -28,7 +33,7 @@ const removeTodo = (id: number) => {
       <div class="flex items-center gap-4">
         <span class="ml-2 text-sm font-normal text-neutral-content" :class="{ 'line-through': todo.done }">{{
           todo.text }}</span>
-        <button class="cursor-pointer">
+        <button @click="edit(todo.id)" class="cursor-pointer">
           <EditIcon />
         </button>
       </div>

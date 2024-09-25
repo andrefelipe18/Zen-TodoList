@@ -4,6 +4,10 @@ import { computed } from "vue";
 export default function useTodos() {
   const todos = useStorage<Todo[]>("todos", []);
 
+  const findTodoById = (id: number) => {
+    return todos.value.find((todo) => todo.id === id);
+  }
+
   const addTodo =  (text: string) => {
     if (!text.trim()) return;
     const now = new Date();
@@ -16,6 +20,13 @@ export default function useTodos() {
     });
   };
 
+  const editTodo = (id: number, value: string) => {
+    const todo = findTodoById(id);
+    if (todo) {
+      todo.text = value;
+    }
+  }
+
   const removeTodo = (id: number) => {
     const index = todos.value.findIndex((todo) => todo.id === id);
     if (index !== -1) todos.value.splice(index, 1);
@@ -26,7 +37,7 @@ export default function useTodos() {
   }
 
   const completeTodo = (id: number) => {
-    const todo = todos.value.find((todo) => todo.id === id);
+    const todo = findTodoById(id);
     if (todo) {
       todo.done = !todo.done;
       todo.doneAt = todo.done ? new Date().toISOString() : '';
@@ -47,6 +58,7 @@ export default function useTodos() {
   return {
     todos,
     addTodo,
+    editTodo,
     removeTodo,
     completeTodo,
     todosGroupedByDate,
