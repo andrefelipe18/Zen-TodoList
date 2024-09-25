@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { useRouter, useRoute } from 'vue-router'
-
-const router = useRouter()
-
+import AppTitle from '@/components/AppTitle.vue';
 import TodoList from '@/components/TodoList.vue';
 import TodoItem from '@/components/TodoItem.vue';
 import TodoInput from '@/components/TodoInput.vue';
 import useTodos from '@/composables/useTodos';
 import AppFooter from '@/components/AppFooter.vue';
+
+const router = useRouter()
 
 const newTodo = ref('');
 
@@ -23,6 +23,8 @@ const editTodo = (id: number) => {
 };
 </script>
 <template>
+    <AppTitle title="Min ToDo" />
+
     <TodoInput v-model="newTodo" @add="add" />
 
     <section class="min-h-[420px] max-h-[420px]">

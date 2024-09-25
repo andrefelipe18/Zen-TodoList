@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import TodoInput from '@/components/TodoInput.vue';
 import { useRouter, useRoute } from 'vue-router'
+import AppTitle from '@/components/AppTitle.vue';
+import TodoInput from '@/components/TodoInput.vue';
 
 const route = useRoute()
 const router = useRouter()
@@ -23,6 +24,8 @@ onMounted(() => {
 })
 </script>
 <template>
+  <AppTitle title="Edit ToDo" />
+
   <TodoInput v-model="todoValue" :edit="true" @edit="edit" />
 </template>
 <style scoped></style>
