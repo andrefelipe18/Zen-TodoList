@@ -30,7 +30,7 @@ const edit = (id: number) => {
       <input type="checkbox"
         class="w-5 h-5 transition duration-150 checkbox text-neutral-content border-neutral-content"
         @change="completeTodo(todo.id)" />
-      <div class="flex items-center gap-4">
+      <div class="flex flex-wrap items-center gap-4">
         <span class="ml-2 text-sm font-normal text-neutral-content" :class="{ 'line-through': todo.done }">{{
           todo.text }}</span>
         <button @click="edit(todo.id)" class="cursor-pointer">
