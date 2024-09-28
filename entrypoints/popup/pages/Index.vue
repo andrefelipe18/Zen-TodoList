@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter } from 'vue-router'
+import { ref } from 'vue';
 import AppTitle from '@/components/AppTitle.vue';
 import TodoList from '@/components/TodoList.vue';
 import TodoItem from '@/components/TodoItem.vue';

@@ -30,7 +30,7 @@ const emitOnEnter = () => {
 </script>
 <template>
   <div class="flex w-full gap-4 px-12">
-    <input
+    <input id="todo-input"
       class="w-full transition duration-150 border input input-bordered text-neutral-content border-neutral-content input-base-100 focus:border-neutral-content "
       type="text" v-model="model" @keyup.shift.enter="emitOnEnter" placeholder="What needs to be done?" />
     <AddButton v-if="!props.edit" @add="addTodo(model)" />

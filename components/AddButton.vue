@@ -8,7 +8,7 @@ const add = () => {
 };
 </script>
 <template>
-  <button class="btn-default !border-neutral-content text-neutral-content" @click="add">
+  <button id="add-todo-button" class="btn-default !border-neutral-content text-neutral-content" @click="add">
     <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
       <g fill="none" fill-rule="evenodd">
         <path
