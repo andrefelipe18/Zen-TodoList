@@ -9,7 +9,7 @@
     alt="Zen Todo List"
     style="width: 50px; height: 50px; border-radius: 20%;">
     </div>
-    <img src="https://img.shields.io/badge/Version-0.0.1-blue" alt="Version 1.0.0">
+    <img src="https://img.shields.io/badge/Version-1.0.0-blue" alt="Version 1.0.0">
     <img src="https://img.shields.io/badge/License-MIT-green" alt="License MIT">
     <img src="https://img.shields.io/badge/Author-Andre%20Felipe-red" alt="Author Andre Felipe">
 </div>
